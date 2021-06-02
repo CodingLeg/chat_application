@@ -16,5 +16,6 @@ jobs:
 
     - name: npm install
       run: npm ci
-      
+
+      run: echo "npm install successfully worked"
     
