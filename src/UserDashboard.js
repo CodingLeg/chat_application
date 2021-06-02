@@ -64,8 +64,8 @@ logout(){
 
     const rows=this.state.data.map((grp)=>{
          
-        if(grp.user_ID==localStorage.getItem("id")){
-          if(grp.role=="user"){
+        if(grp.user_ID===localStorage.getItem("id")){
+          if(grp.role==="user"){
         return (  <div className="card mx-auto mt-3" style={{width:'18rem'}} >
           <div className="card-body">
             <div className="d-flex">

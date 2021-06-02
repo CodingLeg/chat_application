@@ -25,7 +25,7 @@ class Login extends React.Component {
     }
  
       username_validation(){
-        'use strict';
+        
         var username_name = document.getElementById("name");
         var username_value = document.getElementById("name").value;
         var username_length = username_value.length;
@@ -42,7 +42,7 @@ class Login extends React.Component {
     
 
     fullname_validation(){
-        'use strict';
+        
         var username_name = document.getElementById("username");
         var username_value = document.getElementById("username").value;
         var username_length = username_value.length;
@@ -62,7 +62,7 @@ class Login extends React.Component {
         
         //email validation starts
         email_validation(){
-        'use strict';
+        
         var mailformat = /^\w+([\.\-]?\w+)*@\w+([\.\-]?\w+)*(\.\w{2,3})+$/;
         var email_name = document.getElementById("email");
         var email_value = document.getElementById("email").value;
@@ -129,13 +129,13 @@ class Login extends React.Component {
                 }, 1000);
             }
             else{
-            if(this.state.register.username[0]=='user with this username already exists.'){
+            if(this.state.register.username[0]==='user with this username already exists.'){
                 document.getElementById('fail1').style.display='block';
                 setTimeout(function() {
                     $('#fail1').fadeOut('fast'); 
                 }, 1000);
             }
-            if(this.state.register.email[0]=='user with this email already exists.'){
+            if(this.state.register.email[0]==='user with this email already exists.'){
                 document.getElementById('fail2').style.display='block';
                 setTimeout(function() {
                     $('#fail2').fadeOut('fast'); 

@@ -37,7 +37,7 @@ componentWillUnmount() { clearInterval(this.interval); }
 
 
     componentDidMounts(){
-        if(localStorage.getItem("admin")!="admin"){
+        if(localStorage.getItem("admin")!=="admin"){
             window.location.replace("/AdminForm");
        }
         this.registerfn();

@@ -49,8 +49,8 @@ async componentDidMount(){
     render() {
       const rows=this.state.data.map((grp)=>{
 
-        if(grp.subscribe==localStorage.getItem("username")){
-          if(grp.role=="user"){
+        if(grp.subscribe===localStorage.getItem("username")){
+          if(grp.role==="user"){
         return (  <div className="card mx-auto mt-3" style={{width:'18rem'}} >
           <div className="card-body">
             <div className="d-flex">

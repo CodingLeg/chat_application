@@ -46,7 +46,7 @@ export default class Chat extends Component {
      //console.log(this.props.match.params.user)
      //console.log(this.props.match.params.value)
      //console.log(this.props.match.params.group)
-     var a=this.props.match.params.group.split("'")
+     //var a=this.props.match.params.group.split("'")
      //console.log(a)
    //  console.log(this.props.match.params.group.split("'"))
       await fetch('http://127.0.0.1:8000/message/',{
@@ -103,7 +103,7 @@ window.location.reload();
    
 
       const groups=this.state.group.map((grp)=>{
-        if(grp.user_ID==localStorage.getItem("id")){
+        if(grp.user_ID===localStorage.getItem("id")){
            this.a=grp.id
           console.log("GROUP IS"+this.a );
         return(
@@ -121,7 +121,7 @@ window.location.reload();
 
         const rows=this.state.data.map((msg)=>
         { 
-          if(msg.group==this.props.match.params.group){
+          if(msg.group===this.props.match.params.group){
        // eslint-disable-next-line
         if(msg.user==this.props.match.params.user){
 

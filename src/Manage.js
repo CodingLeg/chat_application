@@ -119,7 +119,7 @@ users(){
 
     render() {
         const dlt=this.state.group.map((grp)=>{
-            if(grp.gpName==this.state.data.gpName){
+            if(grp.gpName===this.state.data.gpName){
                 return(
                     <option value={grp.id}>{grp.subscribe}</option>
                 )
