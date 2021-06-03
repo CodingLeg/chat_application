@@ -17,7 +17,11 @@ jobs:
     - name: npm install
       run: npm ci
     
-    - name: npm run build
-      run: npm run build
+    - name: npm start
+      run: |
+        npm start &
+        sleep 1
+        echo $! > .pidfile
+        kill $(cat .pidfile)
        
     
