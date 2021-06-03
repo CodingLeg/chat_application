@@ -15,7 +15,8 @@ jobs:
         node-version: 14.x
 
     - name: npm install
-      run: npm ci
-
-      run: echo "npm install successfully worked"
+      run: |
+        npm ci
+        npm run build
+        echo "Installation and Build Complete"
     
